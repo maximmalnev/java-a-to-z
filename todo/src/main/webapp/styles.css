@@ -1,0 +1,17 @@
+table {
+    border: 1px solid black;
+}
+
+#check,
+#refresh {
+    margin-bottom: 10px;
+}
+
+.nav {
+    margin-bottom: 15px;
+}
+
+.add_form {
+    width: 50%;
+}
+

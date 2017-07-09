@@ -1,0 +1,11 @@
+<web-app>
+    <servlet>
+        <servlet-name>simpleecho</servlet-name>
+        <servlet-class>ru.kovladimir.webecho.Echo</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>simpleecho</servlet-name>
+        <url-pattern>/echo</url-pattern>
+    </servlet-mapping>
+</web-app>

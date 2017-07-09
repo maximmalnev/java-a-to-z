@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="ru.kovladimir.carsale.models">
+    <class name="User" table="users">
+        <id name="id" column="id">
+            <generator class="identity"/>
+        </id>
+        <property name="login" column="login"/>
+        <property name="password" column="password"/>
+        <property name="name" column="name"/>
+
+        <set name="cars" inverse="true" lazy="false">
+            <key column="user_id"/>
+            <one-to-many class="Car"/>
+        </set>
+    </class>
+</hibernate-mapping>

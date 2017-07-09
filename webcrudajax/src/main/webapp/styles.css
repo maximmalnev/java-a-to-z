@@ -1,0 +1,35 @@
+.user-form {
+    width: 300px;;
+}
+
+.form-control {
+    margin-bottom: 5px;
+}
+
+.table {
+    margin-bottom: 50px;
+}
+
+tbody tr {
+    cursor: pointer;
+}
+
+#message,
+#auth-message,
+#delete-message,
+#edit-message {
+    margin-top: 15px;
+}
+
+#message,
+#auth-message,
+#edit-message {
+    visibility: hidden;
+}
+
+
+
+nav span {
+    color: green;
+    text-decoration: underline;
+}

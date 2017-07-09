@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="ru.kovladimir.springcars.persistence.models">
+    <class name="Ad" table="ad">
+        <id name="id" column="id">
+            <generator class="identity"/>
+        </id>
+        <many-to-one lazy="false" fetch="join" outer-join="true"
+                     name="car"
+                     column="car_id"
+                     cascade="all"
+                     class="Car"/>
+        <many-to-one lazy="false" fetch="join" outer-join="true"
+                     name="user"
+                     column="user_id"
+                     cascade="save-update"
+                     class="User"/>
+        <property name="createDate" column="create_date"/>
+        <property name="description" column="description"/>
+        <property name="photo" column="photo"/>
+    </class>
+</hibernate-mapping>

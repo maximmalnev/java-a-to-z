@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <listener>
+        <listener-class>ru.kovladimir.webcrudhtml.ContextListener</listener-class>
+    </listener>
+    
+    <filter>
+        <filter-name>AuthFilter</filter-name>
+        <filter-class>ru.kovladimir.webcrudjsp.filter.AuthFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+    <filter>
+        <filter-name>RoleFilter</filter-name>
+        <filter-class>ru.kovladimir.webcrudjsp.filter.RoleFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>RoleFilter</filter-name>
+        <url-pattern>*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>htmlcrud</servlet-name>
+        <servlet-class>ru.kovladimir.webcrudjsp.MainJspServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>htmlcrud</servlet-name>
+        <url-pattern>/crud</url-pattern>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>adduser</servlet-name>
+        <servlet-class>ru.kovladimir.webcrudjsp.AddUserJspServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>adduser</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>deleteuser</servlet-name>
+        <servlet-class>ru.kovladimir.webcrudjsp.DeleteUserJspServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>deleteuser</servlet-name>
+        <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>edituser</servlet-name>
+        <servlet-class>ru.kovladimir.webcrudjsp.EditUserJspServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>edituser</servlet-name>
+        <url-pattern>/edit</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>signinuser</servlet-name>
+        <servlet-class>ru.kovladimir.webcrudjsp.SignInServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>signinuser</servlet-name>
+        <url-pattern>/signin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>logoutuser</servlet-name>
+        <servlet-class>ru.kovladimir.webcrudjsp.LogOutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logoutuser</servlet-name>
+        <url-pattern>/logout</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>accessDenied</servlet-name>
+        <servlet-class>ru.kovladimir.webcrudjsp.AccessDeniedServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>accessDenied</servlet-name>
+        <url-pattern>/accesdenied</url-pattern>
+    </servlet-mapping>
+
+    
+
+</web-app>

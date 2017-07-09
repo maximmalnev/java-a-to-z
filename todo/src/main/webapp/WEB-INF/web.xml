@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+    <listener>
+        <listener-class>ru.kovladimir.todo.controllers.listeners.MainListener</listener-class>
+    </listener>
+
+    <servlet>
+        <servlet-name>GetItems</servlet-name>
+        <servlet-class>ru.kovladimir.todo.controllers.servlets.GetAll</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetItems</servlet-name>
+        <url-pattern>/get</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddItem</servlet-name>
+        <servlet-class>ru.kovladimir.todo.controllers.servlets.Add</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddItem</servlet-name>
+        <url-pattern>/add</url-pattern>
+    </servlet-mapping>
+
+</web-app>

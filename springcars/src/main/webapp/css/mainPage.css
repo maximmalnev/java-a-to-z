@@ -1,0 +1,33 @@
+.ad {
+    margin: 20px;
+}
+
+.car-photo {
+    margin-right: 20px;
+    vertical-align: top;
+}
+
+
+.car-photo {
+    width: 150px;
+    height: 120px;
+}
+
+.img-rounded {
+    height: 100%;
+    width: 100%;
+}
+
+.car-photo,
+.car-description,
+.ad-button{
+    display: inline-block;
+}
+
+.date-block {
+    /*font-size: 14px;*/
+    font-style: italic;
+    color: #212121;
+    margin-top: 20px;
+}
+

@@ -1,0 +1,54 @@
+.buttons {
+    margin-bottom: 20px;
+}
+
+.car {
+    text-align: center;
+    margin: 0 auto;
+    border: 1px #aba9ae solid;
+}
+
+.car span {
+    font-size: 30px;
+}
+
+.title {
+    text-align: left;
+    margin: 30px 0 30px 30px;
+}
+
+.photo {
+    margin: 0 auto;
+}
+
+.car-photo {
+    height: 400px;
+}
+
+.car-photo img {
+    height: 100%;
+}
+
+.description-block {
+    margin: 30px auto 10px;
+}
+
+.properties {
+    width: 20%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.description {
+    width: 600px;
+    margin: 0 auto;
+}
+
+ul {
+    text-align: left;
+}
+
+li {
+    list-style-type: none;
+}
